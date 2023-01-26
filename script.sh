@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_URL="http://localhost/nagios/cgi-bin/showlog.cgi?archive=1"     ## Use your nagios report links from browser
+_URL="http://localhost/nagios/cgi-bin/showlog.cgi?archive=1"     ## Use your nagios report link from browser
 _USER=nagios_username         ## Change the username as per your nagios user
 _PASSWORD=Your_Nagios_password     ## Change the password as per your nagios user
 _REPORT_PATH=/opt/NagiosReport     ## create or use the same directory as per your requirement
