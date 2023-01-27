@@ -1,0 +1,26 @@
+## We can use the below command to download the wkhtmltopdf package -
+wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos7.x86_64.rpm
+
+## To install it we can use the below command - 
+yum localinstall -y wkhtmltox-0.12.6-1.centos7.x86_64.rpm
+
+## To be able to attach files in the mail notification we have to install mutt package - 
+yum install -y mutt
+
+## We need to provide correct permission to the script file - 
+chmod 700 script.sh
+
+## To run the command - 
+/usr/bin/sh script.sh
+
+## There might be an BAD IDN error in the DNS while sending mail notification, the work around is given below -
+  ## We need to create muttrc file - 
+      vi ~/.muttrc
+  ## Add the below line - 
+      set from="something@something.com"
+ 
+ ## Now we can schedule the script in crontab to send mail notifications automatically -
+      crontab -e
+    ## Add below lines to send mail notification every week on Monday at 8:00 AM - 
+      00 08 * * 1 /usr/bin/sh script.sh
+ 
