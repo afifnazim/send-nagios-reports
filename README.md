@@ -30,7 +30,7 @@ chmod 700 script.sh ## File given in the repository, rename it as neccessary whi
  
  There might be an BAD IDN error in the DNS while sending mail notification, the work around is given below -
  
- We need to create/edit muttrc file and below line - 
+ We need to create/edit muttrc file and add below line - 
  ```shell
  vi ~/.muttrc
  
