@@ -7,9 +7,35 @@ We can install the package from this link - https://wkhtmltopdf.org/downloads.ht
 
 Once we have installed the wkhtmltopdf, we can create the script to automate reports and make a pdf file from nagios html page.
 
-To install wkhtmltopdf we can use
-```shell 
-yum localinstall -y wkhtmltopdf
+We can use the below command to download the wkhtmltopdf package and then install it -
+```shell
+wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos7.x86_64.rpm 
+yum localinstall -y wkhtmltox-0.12.6-1.centos7.x86_64.rpm
 ```
 
-Separate files have been created for bash script and CentOS 7 commands. 
+To be able to attach files in the mail notification we have to install mutt package - 
+```shell
+yum install -y mutt
+```
+
+We need to provide correct permission to the script file and to run the file- 
+```shell
+chmod 700 script.sh
+/usr/bin/sh script.sh
+```
+
+ ## Issues found: 
+ 
+ There might be an BAD IDN error in the DNS while sending mail notification, the work around is given below -
+ 
+ We need to create/edit muttrc file and below line - 
+ ```shell
+ vi ~/.muttrc
+ set from="something@something.com"
+ ```
+ 
+ Now we can schedule the script in crontab to send mail notifications automatically -
+ ```shell
+ crontab -e
+ 00 08 * * 1 /usr/bin/sh script.sh ## This will send email notification at 8 AM every Monday 
+ ```
