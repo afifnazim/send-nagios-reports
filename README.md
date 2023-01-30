@@ -24,7 +24,7 @@ chmod 700 script.sh
 /usr/bin/sh script.sh
 ```
 
- ## Issues found: 
+ ## Issues found
  
  There might be an BAD IDN error in the DNS while sending mail notification, the work around is given below -
  
@@ -33,6 +33,8 @@ chmod 700 script.sh
  vi ~/.muttrc
  set from="something@something.com"
  ```
+ 
+ ## Scheduling it using crontab
  
  Now we can schedule the script in crontab to send mail notifications automatically -
  ```shell
