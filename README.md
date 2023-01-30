@@ -10,6 +10,7 @@ Once we have installed the wkhtmltopdf, we can create the script to automate rep
 We can use the below command to download the wkhtmltopdf package and then install it -
 ```shell
 wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos7.x86_64.rpm 
+
 yum localinstall -y wkhtmltox-0.12.6-1.centos7.x86_64.rpm
 ```
 
