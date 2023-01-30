@@ -7,6 +7,7 @@ We can install the package from this link - https://wkhtmltopdf.org/downloads.ht
 
 Once we have installed the wkhtmltopdf, we can create the script to automate reports and make a pdf file from nagios html page.
 
-To install wkhtmltopdf we can use ```yum localinstall -y wkhtmltopdf```
+To install wkhtmltopdf we can use 
+```yum localinstall -y wkhtmltopdf```
 
 Separate files have been created for bash script and CentOS 7 commands. 
