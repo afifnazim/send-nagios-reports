@@ -20,7 +20,7 @@ yum install -y mutt
 
 We need to provide correct permission to the script file and to run the file- 
 ```shell
-chmod 700 script.sh
+chmod 700 script.sh ## File given in the repository, rename it as neccessary while using in your emvironment
 /usr/bin/sh script.sh
 ```
 
