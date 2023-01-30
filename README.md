@@ -21,6 +21,7 @@ yum install -y mutt
 We need to provide correct permission to the script file and to run the file- 
 ```shell
 chmod 700 script.sh ## File given in the repository, rename it as neccessary while using in your emvironment
+
 /usr/bin/sh script.sh
 ```
 
@@ -31,6 +32,7 @@ chmod 700 script.sh ## File given in the repository, rename it as neccessary whi
  We need to create/edit muttrc file and below line - 
  ```shell
  vi ~/.muttrc
+ 
  set from="something@something.com"
  ```
  
@@ -39,5 +41,6 @@ chmod 700 script.sh ## File given in the repository, rename it as neccessary whi
  Now we can schedule the script in crontab to send mail notifications automatically -
  ```shell
  crontab -e
+ 
  00 08 * * 1 /usr/bin/sh script.sh ## This will send email notification at 8 AM every Monday 
  ```
