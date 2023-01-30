@@ -34,7 +34,7 @@ chmod 700 script.sh ## File given in the repository, rename it as neccessary whi
  ```shell
  vi ~/.muttrc
  
- set from="something@something.com"
+ set from="something@something.com" ## Change it as per your requirement
  ```
  
  ## Scheduling it using crontab
